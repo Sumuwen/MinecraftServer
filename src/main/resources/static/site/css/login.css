@@ -1,0 +1,138 @@
+/* 页面总布局 */
+html,body{
+	/* 页面居中CentreBox */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* html,body的大小与内外边距 */
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background-image: url(../images/login03.jpg);
+	background-size: cover;
+}
+span,p{
+	display: inline-block;
+}
+a{
+	text-decoration: none;
+	color: grey;
+}
+a:hover{
+	color: black;
+}
+/* 大盒子CentreBox */
+#CentreBox{
+	/* 绝对定位与盒子大小*/
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	/* 设置背景颜色方便盒子定位,并设置其透明值 */
+	background-color: rgb(255,255,255,0.6);
+	/* 美化盒子 */
+	border: solid;
+	border-width: 1px;
+	border-radius: 10px;
+}
+/* 小盒子（一） */
+#CentreBox_one{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 350px;
+	height: 50px;
+	font-size: 30px;
+	/* 设置背景颜色方便盒子定位 */
+	/* background-color: aqua; */
+	/* 美化盒子 */
+	border-radius: 10px 10px 0px 0px;
+}
+/* 小盒子（二） */
+#CentreBox_two{
+	display: flex;
+	justify-content: center;
+	width: 350px;
+	height: 200px;
+	/* 设置背景颜色方便盒子定位 */
+	/* background-color: darkcyan; */
+	/* 美化盒子 */
+}
+/* form表单的整体格式 */
+#CentreBox_two form{
+	display: flex;
+	align-content: space-around;
+}
+/* 设置用户名和密码两个文本框的格式 */
+#CentreBox_two form table tr:nth-child(1) td{
+	width: 300px;
+}
+#CentreBox_two form table tr:nth-child(1) td input{
+	width: 300px;
+	height: 38.4px;
+	/* 美化输入框 */
+	border-radius: 10px;
+	background-color: rgb(255,255,255,0.6);
+}
+#CentreBox_two form table tr:nth-child(2) td{
+	width: 300px;
+}
+#CentreBox_two form table tr:nth-child(2) td input{
+	width: 300px;
+	height: 38.4px;
+	/* 美化输入框 */
+	border-radius: 10px;
+	background-color: rgb(255,255,255,0.6);
+}
+/* 选中table标签的最后一个tr标签,再选中其中的td标签 */
+#CentreBox_two form table tr:last-child td{
+	text-align: center;
+}
+#CentreBox_two form table tr:last-child td input{
+	width: 200px;
+	height: 39.4px;
+	transition: box-shadow 0.1s;
+	/* 美化按钮 */
+	border-radius: 10px;
+	background-color: rgb(255,255,255,0.6);
+}
+/* 小盒子（三） */
+#CentreBox-three{
+	display: flex;
+	justify-content: center;
+	width: 350px;
+	height: 50px;
+	/* 设置背景颜色方便盒子定位 */
+	/* background-color: brown; */
+	/* 美化盒子 */
+}
+/* 小盒子（四） */
+#CentreBox_four{
+	width: 350px;
+	height: 50px;
+	text-align: center;
+	/* 设置背景颜色方便盒子定位 */
+	/* background-color: beige; */
+	/* 美化盒子 */
+	border-radius: 0px 0px 10px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
