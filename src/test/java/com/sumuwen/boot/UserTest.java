@@ -16,18 +16,25 @@ public class UserTest {
     @Autowired
     UserService userService;
 
+    /*
+    1.@Test 注解的测试方法应该返回 void 类型,测试方法不应该返回数据，而是应该进行断言以验证代码行为是否
+    符合预期
+    */
     @Test
     @DisplayName("查询所有用户")
-    public List<User> findAllUser(){
-        return userService.findAllUser();
+    public void findAllUser(){
+        System.out.println(userService.findAllUser());
     }
 
     @Test
     @DisplayName("注册用户")
-    public Integer registerUser(){
+    public void registerUser(){
         Date date = new Date(System.currentTimeMillis());
-        User user = new User(1,"lpnzs123","123456","苏沐问",
+        User user = new User(null,"sekiro","123456","苏沐问",
                 "xxxx@qq.com","xxxx",date,1,1);
-        return userService.registerUser(user);
+        Integer result = userService.registerUser(user);
+        if(result == 1){
+            System.out.println("注册成功！");
+        }
     }
 }
