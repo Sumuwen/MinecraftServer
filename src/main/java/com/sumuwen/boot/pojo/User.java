@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.relational.core.sql.In;
 
 import java.util.Date;
 
@@ -28,8 +29,8 @@ public class User {
     private String phoneNumber;
     /* 账号创建日期 */
     private Date createDate;
-    /* 账号是否激活 */
-    private Boolean activated;
+    /* 账号是否激活，1为激活，0为非激活 */
+    private Integer activated;
     /* 属于管理员组还是普通用户组，1为管理员组，0为普通用户组 */
-    private Boolean group;
+    private Integer group;
 }

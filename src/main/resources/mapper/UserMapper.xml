@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sumuwen.boot.dao.UserDao">
+    <resultMap id="UserMap" type="User">
+        <id property="uid" column="uid"></id>
+        <result property="username" column="username"></result>
+        <result property="password" column="password"></result>
+        <result property="nickname" column="nickname"></result>
+        <result property="email" column="email"></result>
+        <result property="phoneNumber" column="phone_number"></result>
+        <result property="createDate" column="create_date"></result>
+        <result property="activated" column="activated"></result>
+        <result property="group" column="group"></result>
+    </resultMap>
+    <select id="findAllUser" resultMap="UserMap">
+        select * from user
+    </select>
+    <insert id="registerUser" parameterType="User">
+        insert into user values(null,#{username},#{password},#{nickname},#{email},#{phoneNumber},
+                                #{createDate},#{activated},#{group})
+    </insert>
+</mapper>
