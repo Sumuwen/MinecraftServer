@@ -16,33 +16,33 @@
 			</div>
 			<!-- 注册细节（账号、密码、注册按钮等） -->
 			<div id="CentreBox_two">
-				<form>
+				<form th:action="@{/registerUser}" th:method="post">
 					<table>
 						<tr>
-							<td><input id="username" placeholder="用户名" type="text"/></td>
+							<td><input name="username" placeholder="用户名" type="text"/></td>
 						</tr>
 						<tr>
-							<td><input id="password" placeholder="密码" type="password"/></td>
+							<td><input name="password" placeholder="密码" type="password"/></td>
 						</tr>
 						<tr>
-							<td><input id="rwpassword" placeholder="重输密码" type="password"/></td>
+							<td><input name="rwpassword" placeholder="重输密码" type="password"/></td>
 						</tr>
 						<tr>
-							<td><input id="email" placeholder="邮箱" type="email"/></td>
+							<td><input name="email" placeholder="邮箱" type="email"/></td>
 						</tr>
 						<tr>
-							<td><input id="phone_number" placeholder="电话号码" type="text"/></td>
+							<td><input name="phoneNumber" placeholder="电话号码" type="text"/></td>
 						</tr>
 						<tr>
-							<td><input id="register_button" type="button" value="注册"/></td>
+							<td><input id="registerButton" type="submit" value="注册"/></td>
 						</tr>
 					</table>
 				</form>	
 			</div>
 			<!-- 附言 -->
 			<div id="CentreBox_three">
-				<span>
-					<p>欢迎来到苏沐问的Minecraft服务器!</p>
+				<span th:style="'color:'+(${flag}?'red':'black')">
+					<p th:text="${flag}?${registerResult}:'欢迎来到苏沐问的Minecraft服务器!'"></p>
 				</span>
 			</div>
 		</div>

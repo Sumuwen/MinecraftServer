@@ -37,4 +37,12 @@ public class UserTest {
             System.out.println("注册成功！");
         }
     }
+
+    @Test
+    @DisplayName("uuid和username的数据库名称重复检查")
+    public void checkUuidAndUsername(){
+        boolean result01 = userService.checkUsername("admin");
+        boolean result02 = userService.checkUuid("1d970313-c48c-4fce-8e94-3af2f646b1d0");
+        System.out.println("用户名是否重复：" + result01 + ",uuid是否重复：" + result02 );
+    }
 }

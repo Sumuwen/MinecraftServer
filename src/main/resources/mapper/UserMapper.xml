@@ -18,7 +18,13 @@
         select * from user
     </select>
     <insert id="registerUser" parameterType="User">
-        insert into user values(null,#{username},#{password},#{nickname},#{email},#{phoneNumber},
-                                #{createDate},#{activated},#{group})
+        insert into user values(null,#{User.username},#{User.password},#{User.nickname},#{User.email},
+                                #{User.phoneNumber},#{User.createDate},#{User.activated},#{User.group})
     </insert>
+    <select id="checkUuid" parameterType="String" resultType="User">
+        select * from user where nickname = #{uuid}
+    </select>
+    <select id="checkUsername" parameterType="String" resultType="User">
+        select * from user where username = #{username}
+    </select>
 </mapper>

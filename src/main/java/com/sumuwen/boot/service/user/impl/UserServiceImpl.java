@@ -22,4 +22,20 @@ public class UserServiceImpl implements UserService {
     public Integer registerUser(User user) {
         return userDao.registerUser(user);
     }
+
+    @Override
+    public boolean checkUuid(String uuid) {
+        if((userDao.checkUuid(uuid) != null) && (userDao.checkUuid(uuid).toString() != "")){
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean checkUsername(String username) {
+        if(userDao.checkUsername(username) != null && userDao.checkUsername(username).toString() != ""){
+            return true;
+        }
+        return false;
+    }
 }
